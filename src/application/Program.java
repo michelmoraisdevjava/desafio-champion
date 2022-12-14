@@ -16,28 +16,28 @@ public class Program {
 
 		System.out.println("Digite os dados do primeiro campeão:");
 		System.out.print("Nome: ");
-		String nameA = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.print("Vida inicial: ");
-		int lifeA = sc.nextInt();
+		int life = sc.nextInt();
 		System.out.print("Ataque: ");
-		int attackA = sc.nextInt();
+		int attack = sc.nextInt();
 		System.out.print("Armadura: ");
-		int armorA = sc.nextInt();
+		int armor = sc.nextInt();
 		System.out.println();
-		cA = new Champion(nameA, lifeA, attackA, armorA);
+		cA = new Champion(name, life, attack, armor);
 
 		System.out.println("Digite os dados do segundo campeão:");
 		System.out.print("Nome: ");
 		sc.nextLine();
-		String nameB = sc.nextLine();
+		name = sc.nextLine();
 		System.out.print("Vida inicial: ");
-		int lifeB = sc.nextInt();
+		life = sc.nextInt();
 		System.out.print("Ataque: ");
-		int attackB = sc.nextInt();
+		attack = sc.nextInt();
 		System.out.print("Armadura: ");
-		int armorB = sc.nextInt();
+		armor = sc.nextInt();
 		System.out.println();
-		cB = new Champion(nameB, lifeB, attackB, armorB);
+		cB = new Champion(name, life, attack, armor);
 
 		cA.takeDamage(cB);
 		cB.takeDamage(cA);
