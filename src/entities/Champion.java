@@ -46,6 +46,7 @@ public class Champion {
 		this.armor = armor;
 	}
 	
+	
 	public void takeDamage(Champion other) {
 		int damage = other.attack - armor;
 		life -= damage;

@@ -39,29 +39,37 @@ public class Program {
 		System.out.println();
 		cB = new Champion(name, life, attack, armor);
 
-		cA.takeDamage(cB);
-		cB.takeDamage(cA);
+		// cA.takeDamage(cB);
+		// cB.takeDamage(cA);
 
 		System.out.print("Quantos turnos você deseja executar? ");
 		n = sc.nextInt();
-		
-		System.out.println(cA.getLife());
-		System.out.println(cB.getLife());
 
 		for (i = 0; i < n; i++) {
+			if (cA.getLife() > 0 || cB.getLife() > 0) {
 			System.out.println();
 			System.out.println("Resultado do turno " + (i + 1) + ":");
-			if (cA.getLife() != 0 && cB.getLife() != 0) {
-				System.out.println(cA.getLife());
-				System.out.println(cB.getLife());
-			} else {
+			
+				if (i == 0) {
+					cA.takeDamage(cB);
+					cB.takeDamage(cA);
+					System.out.println(cA.getLife());
+					System.out.println(cB.getLife());
+				} else {
+					cA.takeDamage(cB);
+					cB.takeDamage(cA);
+					System.out.println(cA.getLife());
+					System.out.println(cB.getLife());
+				}
+			}else {
+				System.out.println();
 				System.out.println("FIM DO COMBATE");
 			}
-			
+				
 		}
+		System.out.println();
 		System.out.println("FIM DO COMBATE");
 
-		
 		sc.close();
 	}
 
