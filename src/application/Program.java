@@ -50,8 +50,8 @@ public class Program {
 				System.out.println("Resultado do turno " + (i + 1) + ":");
 				cA.takeDamage(cB);
 				cB.takeDamage(cA);
-				System.out.println(cA.getLife());
-				System.out.println(cB.getLife());
+				System.out.println(cA.status());
+				System.out.println(cB.status());
 			}
 		}
 		System.out.println();
